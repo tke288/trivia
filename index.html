@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+ 
+    <title>Trivia</title>
+</head>
+<body>
+        <h1>Trivia</h1>
+    <div class="container">
+        <div class="start">
+            <button type="button">Start Game</button>
+        </div>
+
+        <div class="question">
+        </div>
+
+            <div class="guess button1" value = "a1"><span id="choice1"></span></div>
+            <div class="guess button2" value = "a2"><span id="choice2"></span></div>
+            <div class="guess button3" value = "a3"><span id="choice3"></span></div>
+            <div class="guess button4" value = "a4"><span id="choice4"></span></div>
+            <div class="correct"></div>
+
+        <div class="timer"> 00:00
+        </div>
+
+        <div class="answer"> answer
+        </div>
+
+        <div class="skip">
+            <button type="button">Skip Question!</button>
+        </div>  
+
+        <div class="questionnumber"> question x of y
+        </div>
+    </div>
+
+    <div class="container">
+        <div class= "final-screen"></div>
+    </div>
+        
+  <script src="js.js"></script>
+
+</body>
+</html>
