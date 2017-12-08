@@ -36,11 +36,6 @@ var questions = [
              	a3: "wrong", 
              	a4: "wrong", 
              	correct: "a2"},
-             { q: "Game Over",
-             	a1: "You got " + correct + " questions correct.",
-             	a2: "",
-             	a3: "You got " + wrong + " questions wrong.",
-             	a4: ""}
              ];
 
 $(".start").on("click" , function(event){
@@ -48,7 +43,6 @@ $(".start").on("click" , function(event){
 question();
 countdown();
 updateTimer();
-final();
 })	
 
 $(".skip").on("click", function(event){
@@ -62,10 +56,7 @@ console.log(wrong);
 
 $(".guess").on("click" , function(event){
         response = $(this).attr("value");
-        console.log(response)
-        console.log(count)
-        console.log(questions)
-        console.log(questions[count])
+        
     if (response == questions[count].correct) {
             correct++;
             console.log(correct)
@@ -74,9 +65,11 @@ $(".guess").on("click" , function(event){
     else {
     	wrong++;
     	console.log(wrong)
-    	alert("That is wrong! The correct answer is " + correct)
+    	alert("That is wrong! The correct answer is " + questions[count].correct)
     	}
         timerSet = 15;
+    count++;
+final();
 question();
 })
 
@@ -112,13 +105,12 @@ function question(){
     $(".button2").html(questions[count].a2);
     $(".button3").html(questions[count].a3);
     $(".button4").html(questions[count].a4);
-    count++;
 	timeUp();
 	
 }
 
 function final(){
-	if (questions = 5){
+	if (count > 5){
     $(".final-screen").html("<p>Correct Answers: " + correct + "</p>");
     $(".final-screen").append("<p>Incorrect Answers: " + wrong + "</p>");    
     }
