@@ -12,40 +12,62 @@
     <title>Trivia</title>
 </head>
 <body>
-        <h1>Trivia</h1>
-    <div class="container">
-        <div class="start">
-            <button type="button">Start Game</button>
+<div class="container">
+    <div class="jumbotron" style="background-color: red; color: white; margin: 0px, 50px, 20px">
+        <div class=row>
+            <div class=col-lg-12>
+                <h1 class=text-center>Brad Trivia!</h1>
+            </div>
         </div>
+    </div>
 
-        <div class="question">
-        </div>
 
-            <div class="guess button1" value = "a1"><span id="choice1"></span></div>
-            <div class="guess button2" value = "a2"><span id="choice2"></span></div>
-            <div class="guess button3" value = "a3"><span id="choice3"></span></div>
-            <div class="guess button4" value = "a4"><span id="choice4"></span></div>
-            <div class="correct"></div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="start">
+                <button type="button" style="margin-bottom: 10px">Start Game</button>
+            </div>
 
-        <div class="timer"> 00:00
-        </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title question">
+                        <h4 style="color: white; background-color: #20315A">Lets Begin!</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel-body" style="border: 2px solid black; padding: 1px 15px;">
+                <div class="guess button1 btn" value = "a1"><span id="choice1"></span></div>
+                <div class="guess button2 btn" value = "a2"><span id="choice2"></span></div>
+                <div class="guess button3 btn" value = "a3"><span id="choice3"></span></div>
+                <div class="guess button4 btn" value = "a4"><span id="choice4"></span></div>
+                <div class="correct"></div>
+            </div>      
 
-        <div class="answer"> answer
-        </div>
+            <div class="timer"> 00:00
+            </div>
 
-        <div class="skip">
-            <button type="button">Skip Question!</button>
-        </div>  
+            <div class="answer"> answer
+            </div>
 
-        <div class="questionnumber"> question x of y
+            <div class="skip">
+                <button type="button">Skip Question!</button>
+            </div>  
+
+            <div class="questionnumber"> 
+            </div>
         </div>
     </div>
 
     <div class="container">
-        <div class= "final-screen"></div>
+        <div class="row" style="margin: 15px">
+            <div class="col-lg-12">
+                <div class= "final-screen"></div>
+            </div>
+        </div>
     </div>
         
   <script src="js.js"></script>
-
+</div>
 </body>
 </html>
